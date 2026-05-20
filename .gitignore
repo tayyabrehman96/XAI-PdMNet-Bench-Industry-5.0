@@ -57,6 +57,10 @@ colab/extracted_outputs/**
 colab/extracted_outputs2/**
 colab/2.15
 
+# Manuscript drafts + manuscript figure outputs (keep local only).
+# Published on GitHub: `docs/assets/architecture.png` for the README diagram.
+Paper research/
+
 # Third-party PDFs / large reports — use Releases or Zenodo if needed
 applsci-14-04899.pdf
 research_analysis.pdf

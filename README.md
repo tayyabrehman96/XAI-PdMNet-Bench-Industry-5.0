@@ -32,10 +32,10 @@ Official code and notebook companion for the research framework **XAI-PdMNet-Ben
 | [`src/xai_pdmbench/`](src/xai_pdmbench/) | Small **reusable** library: UCI constants, Ileri-style cleaning, **B1/B2** feature builders (matches notebook logic) |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | End-to-end pipeline + **Mermaid** architecture (renders on GitHub) |
 | [`scripts/export_notebook_cells.py`](scripts/export_notebook_cells.py) | Splits the `.ipynb` into many `.py`/`.md` files under `colab/notebook_export/` for review and partial reuse |
-| [`generate_figures.py`](generate_figures.py) | Local script to regenerate manuscript-style figures (optional) |
+| [`generate_figures.py`](generate_figures.py) | Local script to regenerate figures into `Paper research/` (ignored by Git); also refreshes **`docs/assets/architecture.png`** for the README |
 | [`docs/REPO_UPLOAD_CHECKLIST.md`](docs/REPO_UPLOAD_CHECKLIST.md) | Checklist of what belongs on GitHub vs what to omit |
 
-**Intentionally omitted from Git** (see [`.gitignore`](.gitignore)): trained weights, `ARTIFACTS/`, checkpoints, cached CSV copies, API keys, scratch notebooks, and bulky export packs. Upload only what your paper needs; use Releases or Zenodo for frozen artifact bundles.
+**Intentionally omitted from Git** (see [`.gitignore`](.gitignore)): manuscript drafts and full figure sets under `Paper research/`, trained weights, `ARTIFACTS/`, checkpoints, cached CSV copies, API keys, scratch notebooks, and bulky export packs. Upload only what your paper needs; use Releases or Zenodo for frozen artifact bundles.
 
 ---
 
@@ -86,7 +86,11 @@ X, y = build_features_b2(df)
 
 ## Architecture diagram
 
-See **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for the six-stage pipeline, data flow, and a Mermaid diagram suitable for GitHub. Add your own `docs/assets/pipeline.png` if you want a bitmap figure in the README (not required).
+![CNN–LSTM architecture (XAI-PdMNet)](docs/assets/architecture.png)
+
+The bitmap above is **`docs/assets/architecture.png`** (the only manuscript-style figure tracked in Git). Additional LaTeX and figure outputs stay in **`Paper research/`** locally and are omitted from Git (see [`.gitignore`](.gitignore)).
+
+For prose and flow details, see **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** (includes a **Mermaid** diagram that renders on GitHub).
 
 ---
 

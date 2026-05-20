@@ -3,8 +3,10 @@
 generate_figures.py
 -------------------
 Generates all publication-quality figures for XAI-PdMNet paper.
-Run from:  c:\\Users\\Tayyab\\Desktop\\XAI
-Output:    figures/  (created automatically)
+Run from:  c:\\Users\\Tayyab\\Desktop\\XAI (repo root).
+Output:    ``Paper research/`` (ignored by Git) for full manuscript renders;
+           ``docs/assets/architecture.png`` is updated alongside ``fig7_architecture``
+           for the README.
 """
 
 import os
@@ -59,14 +61,25 @@ C = {
     "cyan":   "#17becf",
 }
 
-OUTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                      "Paper research")
+ROOT = os.path.dirname(os.path.abspath(__file__))
+OUTDIR = os.path.join(ROOT, "Paper research")
+README_ARCHITECTURE_PNG = os.path.join(
+    ROOT, "docs", "assets", "architecture.png")
 os.makedirs(OUTDIR, exist_ok=True)
 
 
-def _save(name):
+def _save(name, copy_architecture_png_to_readme_asset=False):
     path = os.path.join(OUTDIR, name)
     plt.savefig(path, dpi=300, bbox_inches="tight", facecolor="white")
+    if copy_architecture_png_to_readme_asset:
+        os.makedirs(os.path.dirname(README_ARCHITECTURE_PNG), exist_ok=True)
+        plt.savefig(
+            README_ARCHITECTURE_PNG,
+            dpi=300,
+            bbox_inches="tight",
+            facecolor="white",
+        )
+        print(f"  → {README_ARCHITECTURE_PNG}")
     plt.close()
     print(f"  {name}")
 
@@ -1178,7 +1191,10 @@ def fig7_architecture():
         "Fault probability P(fault) ∈ [0,1]",
         fontsize=12, fontweight="bold")
     plt.tight_layout()
-    _save("fig7_architecture.png")
+    _save(
+        "fig7_architecture.png",
+        copy_architecture_png_to_readme_asset=True,
+    )
 
 
 # ===========================================================================
