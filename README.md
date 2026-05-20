@@ -107,3 +107,4 @@ Use the citation block from your forthcoming *Sensors* / MDPI manuscript when av
 ## Licence
 
 Code in this repository is provided for research reproduction. The **AI4I 2020** data remain under **CC BY 4.0** (UCI).
+
