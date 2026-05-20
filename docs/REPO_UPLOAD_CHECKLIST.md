@@ -4,7 +4,7 @@ Aligned with [`.gitignore`](../.gitignore): **small, reproducible** assets only.
 
 ## Always include
 
-- [ ] [`README.md`](../README.md) (root technical overview + UCI / CSV links)
+- [ ] [`data/ai4i2020.csv`](../data/ai4i2020.csv) + [`data/README.md`](../data/README.md) (**UCI mirror** with attribution reminder)
 - [ ] [`docs/ARCHITECTURE.md`](ARCHITECTURE.md) (+ [`docs/assets/architecture.png`](assets/architecture.png) — README bitmap; optional Mermaid renders from the markdown alone)
 - [ ] [`LICENSE`](../LICENSE)
 - [ ] [`pyproject.toml`](../pyproject.toml)

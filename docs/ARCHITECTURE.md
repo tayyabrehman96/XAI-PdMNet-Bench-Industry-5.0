@@ -84,12 +84,17 @@ flowchart TB
 
 ---
 
-## Optional bitmap figure
+## CNN–LSTM backbone (tracked bitmap — `fig7_architecture`)
 
-To add a raster pipeline image for talks or the GitHub README:
+The schematic below duplicates **`docs/assets/architecture.png`** in the repo and mirrors the **`fig7_architecture()`** emitter in **`generate_figures.py`** (Conv1D feature extraction → `MaxPool1D` → stacked LSTM with dropout tiers → dense + sigmoid for `P(fault)`).
 
-1. Export from your paper (`fig1_pipeline.png`) or regenerate with `generate_figures.py`.
-2. Save as `docs/assets/pipeline.png`.
-3. Reference it from the root `README.md` if desired.
+![CNN-LSTM schematic](assets/architecture.png)
 
-Place a `.gitkeep` in `docs/assets/` so the folder exists before you add the PNG.
+Reading order follows the boxed pathway left-to-right:
+
+1. **Input `[N,10,25]`** — Sliding windows reshape **tabular B2 features** (`TWF…RNF` removed from inputs) into **pseudo-time** so kernels scan short contexts.
+2. **Conv stacks** learn local temporal motifs; pooling halves the synthetic clock rate.
+3. **Dual `LSTM` cells** summarise the convolved trajectory; dropout isolates latent units from class-specific memorisation artefacts.
+4. **Dense bottleneck + sigmoid** emit calibrated fault logits suitable for imbalance-aware thresholding (**`τ*`** on validation in the notebook stack).
+
+Cross-link: the **[root `README.md`](../README.md)** reproduces this figure with prose tailored for repository visitors unfamiliar with Stage 6 XAI artefacts.

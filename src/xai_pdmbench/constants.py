@@ -13,5 +13,9 @@ AI4I_LANDING_PAGE: str = (
 )
 UCI_DOI: str = "10.24432/C5HS5C"
 
+# Optional checkout-local mirror (repository root-relative). Prefer UCI HTTPS for the
+# freshest canonical file when online; bundled copy helps offline reproducibility.
+AI4I_BUNDLED_CSV_REPO_RELATIVE: str = "data/ai4i2020.csv"
+
 # Failure-mode indicator columns — label leakage if used as inputs (B2 drops them).
 FAULT_COLUMNS: tuple[str, ...] = ("TWF", "HDF", "PWF", "OSF", "RNF")

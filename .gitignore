@@ -57,6 +57,9 @@ colab/extracted_outputs/**
 colab/extracted_outputs2/**
 colab/2.15
 
+# Local figure spills (outputs belong under Paper research/ or docs/assets/).
+fig7_architecture.png
+
 # Manuscript drafts + manuscript figure outputs (keep local only).
 # Published on GitHub: `docs/assets/architecture.png` for the README diagram.
 Paper research/
