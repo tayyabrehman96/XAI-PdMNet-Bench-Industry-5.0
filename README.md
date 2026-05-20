@@ -133,17 +133,53 @@ Running **`python generate_figures.py`** executes **`fig7_architecture`** (among
 
 ---
 
+## Citing this work (papers, posters, coursework)
+
+Follow **transparent software + data acknowledgement** norms (crediting code, immutable archive, and the original dataset licence).
+
+### 1) GitHub citation (immediate)
+
+GitHub parses **[`CITATION.cff`](CITATION.cff)** automatically — visitors see **“Cite this repository”** with APA/BibTeX-style metadata. Prefer copying from that sidebar after each release so URLs stay exact.
+
+Alternatively, cite the repository directly:
+
+> AlKahtani, M. S., Rehman, T., Almasad, A., Khalid, Q. S., & Mustafa, M. (2026). *Beyond Data Leakage: Explainable Predictive Maintenance Benchmarking Framework for Industry 5.0 (XAI-PdMNet-Bench/xai-pdmbench)* [Computer software]. https://github.com/tayyabrehman96/Beyond-Data-Leakage-An-Explainable-Predictive-Maintenance-Benchmarking-Framework-for-Industry-5.0
+
+Copy-ready BibTeX (also mirrored in **[`CITATION.bib`](CITATION.bib)**):
+
+```bibtex
+@misc{AlKahtaniRehman2026XaiPdmbenchSoftware,
+  title        = {Beyond Data Leakage: Explainable Predictive Maintenance Benchmarking Framework for Industry 5.0 ({XAI-PdMNet-Bench})},
+  author       = {AlKahtani, Mohammed S. and Rehman, Tayyab and Almasad, Abdullah and Khalid, Qazi Salman and Mustafa, Muzzamil},
+  year         = {2026},
+  howpublished = {\url{https://github.com/tayyabrehman96/Beyond-Data-Leakage-An-Explainable-Predictive-Maintenance-Benchmarking-Framework-for-Industry-5.0}},
+  note         = {Software v0.1.0; cite together with UCI AI4I DOI.}
+}
+```
+
+Add the **Sensors** / MDPI manuscript DOI as soon as the publisher assigns it (“peer-reviewed record” cites the article; companion code cites GitHub ± Zenodo below).
+
+### 2) Prefer a resolving DOI (**Zenodo** + GitHub Release)
+
+For long‑term reproducibility, authors should **mint a Zenodo archival DOI** per tagged release (`v0.1.0`, `v1.0.0`, …). Workflow (high‑level):
+
+1. Link the Zenodo/GitHub integration once (Zenodo ⇄ OAuth to GitHub).  
+2. Publish a **[GitHub Release](https://github.com/tayyabrehman96/Beyond-Data-Leakage-An-Explainable-Predictive-Maintenance-Benchmarking-Framework-for-Industry-5.0/releases)** with a semver tag — Zenodo clones the archival snapshot automatically.  
+3. Paste **both** citations in manuscripts: Sensors DOI *(article)* **+** Zenodo DOI *(software snapshot)* **+** UCI AI4I DOI [`10.24432/C5HS5C`](https://doi.org/10.24432/C5HS5C) *(data)*.
+
+This matches common **FAIR/Open Science practice**: code + immutable snapshot + curated dataset lineage.
+
+### 3) Dataset
+
+Always cite **[UCI Dataset 601 — AI4I 2020](https://doi.org/10.24432/C5HS5C)** (CC BY 4.0) even though [`data/ai4i2020.csv`](data/ai4i2020.csv) is bundled for convenience (`data/README.md` lists attribution language).
+
+---
+
 ## Related references
 
 - Base CNN benchmark (leakage-prone setting in many reproductions): Ileri, Altun, Narin (2024), *Appl. Sci.* — [DOI 10.3390/app14114899](https://doi.org/10.3390/app14114899)
 - CTGAN: Xu et al., *NeurIPS* DGM workshop — SDV implementation in notebook
 - SHAP: Lundberg & Lee — [TreeExplainer / GradientExplainer](https://github.com/slundberg/shap)
-
----
-
-## Citation
-
-Use the citation block from your forthcoming *Sensors* / MDPI manuscript when available. Until then, cite the repository URL and the UCI dataset DOI above.
 
 ---
 

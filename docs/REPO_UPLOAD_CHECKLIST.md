@@ -4,6 +4,9 @@ Aligned with [`.gitignore`](../.gitignore): **small, reproducible** assets only.
 
 ## Always include
 
+- [ ] [`README.md`](../README.md)
+- [ ] [`CITATION.cff`](../CITATION.cff) + [`CITATION.bib`](../CITATION.bib) (GitHub “Cite this repository” + BibTeX mirror)
+
 - [ ] [`data/ai4i2020.csv`](../data/ai4i2020.csv) + [`data/README.md`](../data/README.md) (**UCI mirror** with attribution reminder)
 - [ ] [`docs/ARCHITECTURE.md`](ARCHITECTURE.md) (+ [`docs/assets/architecture.png`](assets/architecture.png) — README bitmap; optional Mermaid renders from the markdown alone)
 - [ ] [`LICENSE`](../LICENSE)
