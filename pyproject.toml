@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xai-pdmbench"
+version = "0.1.0"
+description = "Leakage-safe AI4I 2020 predictive maintenance helpers (XAI-PdMNet-Bench)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=1.5",
+]
+
+[project.optional-dependencies]
+full = [
+  "ucimlrepo>=0.0.3",
+  "scikit-learn>=1.2",
+  "tensorflow>=2.12",
+  "xgboost>=2.0",
+  "shap>=0.43",
+  "sdv>=1.9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
