@@ -1,0 +1,9 @@
+{
+  "source_dir": "data/phm2010/source/originfeature",
+  "failure_threshold": 152.0,
+  "target_window": 500,
+  "windows_csv": "data/phm2010/phm2010_windows_6x500.csv",
+  "feature_csv": "data/phm2010/phm2010_feature_table.csv",
+  "rows_windows": 945,
+  "rows_features": 945
+}

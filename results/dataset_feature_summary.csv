@@ -1,0 +1,8 @@
+item,value
+raw_rows,10000
+clean_rows,9973
+dropped_inconsistent_rows,27
+raw_failures,339
+clean_failures,330
+clean_normals,9643
+b2_feature_count,25

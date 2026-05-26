@@ -1,0 +1,21 @@
+dataset,artifact,path,present,bytes
+AI4I 2020,logistic_regression.joblib,trained_models/ai4i/logistic_regression.joblib,True,2769
+AI4I 2020,random_forest_ctgan.joblib,trained_models/ai4i/random_forest_ctgan.joblib,True,8790265
+AI4I 2020,hist_gradient_boosting_ctgan.joblib,trained_models/ai4i/hist_gradient_boosting_ctgan.joblib,True,1854304
+AI4I 2020,xgboost_ctgan.json,trained_models/ai4i/xgboost_ctgan.json,True,1393329
+AI4I 2020,numpy_logistic_weighted.npz,trained_models/ai4i/numpy_logistic_weighted.npz,True,1598
+AI4I 2020,numpy_gaussian_nb.npz,trained_models/ai4i/numpy_gaussian_nb.npz,True,3176
+AI4I 2020,numpy_knn_k5.npz,trained_models/ai4i/numpy_knn_k5.npz,True,1661062
+AI4I 2020,alexnet1d_safe.pt,trained_models/ai4i/alexnet1d_safe.pt,True,1182725
+AI4I 2020,alexnet1d_safe_weights.pt,trained_models/ai4i/alexnet1d_safe_weights.pt,True,1181605
+AI4I 2020,tabtransformer.pt,trained_models/ai4i/tabtransformer.pt,True,528649
+AI4I 2020,tabtransformer_weights.pt,trained_models/ai4i/tabtransformer_weights.pt,True,527537
+AI4I 2020,cnn_lstm_thr031.pt,trained_models/ai4i/cnn_lstm_thr031.pt,True,204259
+AI4I 2020,cnn_lstm_thr031_weights.pt,trained_models/ai4i/cnn_lstm_thr031_weights.pt,True,203155
+PHM 2010,xgboost_phm.json,trained_models/phm2010/xgboost_phm.json,True,297681
+PHM 2010,cnn1d_phm.pt,trained_models/phm2010/cnn1d_phm.pt,True,255382
+PHM 2010,cnn1d_phm_weights.pt,trained_models/phm2010/cnn1d_phm_weights.pt,True,255182
+PHM 2010,rcnn_phm.pt,trained_models/phm2010/rcnn_phm.pt,True,272649
+PHM 2010,rcnn_phm_weights.pt,trained_models/phm2010/rcnn_phm_weights.pt,True,272441
+PHM 2010,transfer_ai4i_to_phm.pt,trained_models/phm2010/transfer_ai4i_to_phm.pt,True,74517
+PHM 2010,transfer_ai4i_to_phm_weights.pt,trained_models/phm2010/transfer_ai4i_to_phm_weights.pt,True,72853

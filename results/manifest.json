@@ -1,0 +1,26 @@
+{
+  "primary_dataset": "data\\ai4i\\ai4i2020.csv",
+  "second_dataset_expected": "data/phm2010/",
+  "trained_models_expected": "trained_models/",
+  "outputs": [
+    "ai4i_deep_pt_model_metrics.csv",
+    "ai4i_deep_training_config.csv",
+    "ai4i_model_details.csv",
+    "ai4i_trained_model_metrics.csv",
+    "b2_features.csv",
+    "csv_inventory.csv",
+    "dataset_feature_summary.csv",
+    "dataset_inventory.csv",
+    "fast_recomputed_baselines.csv",
+    "fast_release_model_metrics.csv",
+    "manifest.json",
+    "model_inventory.csv",
+    "phm2010_model_details.csv",
+    "phm_model_metrics.csv",
+    "phm_training_config.csv",
+    "reproduction_results_bundle.xlsx",
+    "reproduction_status.csv",
+    "trained_model_artifacts.csv"
+  ],
+  "note": "Code-first bundle: all metrics are generated from local CSV/data arrays and trained artifacts; no performance table is copied from the PDF."
+}

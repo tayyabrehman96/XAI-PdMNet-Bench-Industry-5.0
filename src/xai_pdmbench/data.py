@@ -1,4 +1,4 @@
-"""Load, normalize column names, and apply Ileri-style cleaning rules."""
+"""Load, normalize column names, and clean the AI4I benchmark table."""
 
 from __future__ import annotations
 
@@ -15,9 +15,9 @@ def normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df.rename(columns={c: c.strip() for c in df.columns})
 
 
-def clean_ai4i_basepaper(frame: pd.DataFrame) -> pd.DataFrame:
+def clean_ai4i_benchmark_rows(frame: pd.DataFrame) -> pd.DataFrame:
     """
-    Remove inconsistent Machine failure vs fault-flag rows (Ileri et al. narrative).
+    Remove inconsistent Machine failure vs fault-flag rows.
 
     Drops rows where: (RNF==1 and MF==0) OR (MF==1 and no fault flag set).
     """
@@ -35,7 +35,7 @@ def clean_ai4i_basepaper(frame: pd.DataFrame) -> pd.DataFrame:
     mask = bad_rnf | bad_mf
     removed = int(mask.sum())
     out = d[~mask].reset_index(drop=True)
-    print(f"clean_ai4i_basepaper: dropped {removed} inconsistent rows; remaining {len(out)}")
+    print(f"clean_ai4i_benchmark_rows: dropped {removed} inconsistent rows; remaining {len(out)}")
     return out
 
 

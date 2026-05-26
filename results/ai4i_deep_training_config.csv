@@ -1,0 +1,4 @@
+model,epochs,seed
+alexnet1d_safe,30,42
+tabtransformer,30,42
+cnn_lstm_thr031,20,42

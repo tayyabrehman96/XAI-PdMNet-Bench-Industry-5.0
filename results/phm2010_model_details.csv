@@ -1,0 +1,8 @@
+dataset,artifact,path,present,bytes
+PHM 2010,xgboost_phm.json,trained_models/phm2010/xgboost_phm.json,True,297681
+PHM 2010,cnn1d_phm.pt,trained_models/phm2010/cnn1d_phm.pt,True,255382
+PHM 2010,cnn1d_phm_weights.pt,trained_models/phm2010/cnn1d_phm_weights.pt,True,255182
+PHM 2010,rcnn_phm.pt,trained_models/phm2010/rcnn_phm.pt,True,272649
+PHM 2010,rcnn_phm_weights.pt,trained_models/phm2010/rcnn_phm_weights.pt,True,272441
+PHM 2010,transfer_ai4i_to_phm.pt,trained_models/phm2010/transfer_ai4i_to_phm.pt,True,74517
+PHM 2010,transfer_ai4i_to_phm_weights.pt,trained_models/phm2010/transfer_ai4i_to_phm_weights.pt,True,72853

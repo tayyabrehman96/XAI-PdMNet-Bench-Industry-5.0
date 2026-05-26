@@ -1,0 +1,3 @@
+dataset,expected_location,present,file_count,project_role
+AI4I 2020,data/ai4i/ai4i2020.csv,True,1,Leakage-safe tabular CNC predictive-maintenance benchmark
+PHM 2010,data/phm2010/,True,9,Tool-independent real CNC milling validation benchmark

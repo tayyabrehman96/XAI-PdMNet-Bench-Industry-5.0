@@ -1,0 +1,22 @@
+path,bytes,used_in_repro_pipeline,role
+data/ai4i/ai4i2020.csv,522048,True,primary AI4I dataset
+data/phm2010/phm2010_dataset_status.csv,142,True,secondary PHM 2010 dataset/derived table
+data/phm2010/phm2010_feature_table.csv,897853,True,secondary PHM 2010 dataset/derived table
+data/phm2010/phm2010_windows_6x500.csv,55908938,True,secondary PHM 2010 dataset/derived table
+results/ai4i_deep_pt_model_metrics.csv,520,True,generated result table
+results/ai4i_deep_training_config.csv,86,True,generated result table
+results/ai4i_model_details.csv,1216,True,generated result table
+results/ai4i_trained_model_metrics.csv,631,True,generated result table
+results/b2_features.csv,394,True,generated result table
+results/csv_inventory.csv,5642,True,generated result table
+results/dataset_feature_summary.csv,154,True,generated result table
+results/dataset_inventory.csv,244,True,generated result table
+results/fast_recomputed_baselines.csv,569,True,generated result table
+results/fast_release_model_metrics.csv,518,True,generated result table
+results/model_inventory.csv,1995,True,generated result table
+results/phm2010_model_details.csv,628,True,generated result table
+results/phm_model_metrics.csv,632,True,generated result table
+results/phm_training_config.csv,98,True,generated result table
+results/reproduction_status.csv,356,True,generated result table
+results/trained_model_artifacts.csv,1807,True,generated result table
+trained_models/ALL_TRAINED_MODELS_INVENTORY.csv,1807,False,not used by the reproducibility workflow

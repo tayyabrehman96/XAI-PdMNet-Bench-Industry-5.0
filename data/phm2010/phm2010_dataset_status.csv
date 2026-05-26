@@ -1,0 +1,5 @@
+cutter,cuts,failure_threshold,failure_cuts,normal_cuts
+C1,315,152.0,25,290
+C4,315,152.0,44,271
+C6,315,152.0,86,229
+ALL,945,152.0,155,790

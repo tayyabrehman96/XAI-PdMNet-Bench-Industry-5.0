@@ -1,0 +1,5 @@
+model,epochs,seed
+xgboost_phm,0,42
+cnn1d_phm,35,42
+rcnn_phm,35,42
+transfer_ai4i_to_phm,45,42

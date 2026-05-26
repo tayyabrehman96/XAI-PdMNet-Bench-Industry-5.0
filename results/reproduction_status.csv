@@ -1,0 +1,5 @@
+component,status,code_first_rule
+AI4I dataset,ready,computed from data/ai4i/ai4i2020.csv
+PHM 2010 dataset,ready,generated from bundled PHM 2010 source arrays and CSV tables
+trained release models,present,metrics should be regenerated from model files or training code
+pdf-derived tables,not generated here,no PDF-derived metrics are written by this script

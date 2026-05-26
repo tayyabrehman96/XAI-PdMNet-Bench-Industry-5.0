@@ -1,0 +1,15 @@
+dataset,model_id,project_role,expected_extensions,present_in_repo,matched_files
+AI4I 2020,xgboost_ctgan,XGBoost proposed model,.json/.ubj/.pkl/.joblib,True,trained_models/ai4i/xgboost_ctgan.json
+AI4I 2020,random_forest_ctgan,Random Forest baseline,.pkl/.joblib,True,trained_models/ai4i/random_forest_ctgan.joblib
+AI4I 2020,hist_gradient_boosting_ctgan,HistGradientBoosting baseline,.pkl/.joblib,True,trained_models/ai4i/hist_gradient_boosting_ctgan.joblib
+AI4I 2020,logistic_regression,Linear baseline,.pkl/.joblib,True,trained_models/ai4i/logistic_regression.joblib
+AI4I 2020,alexnet1d_safe,Leakage-safe 1D-AlexNet,.pt/.keras/.h5,True,trained_models/ai4i/alexnet1d_safe.pt; trained_models/ai4i/alexnet1d_safe_weights.pt
+AI4I 2020,tabtransformer,Proposed deep tabular model,.pt/.keras/.pth,True,trained_models/ai4i/tabtransformer.pt; trained_models/ai4i/tabtransformer_weights.pt
+AI4I 2020,cnn_lstm_thr031,Exploratory pseudo-temporal diagnostic,.pt/.keras/.h5,True,trained_models/ai4i/cnn_lstm_thr031.pt; trained_models/ai4i/cnn_lstm_thr031_weights.pt
+PHM 2010,xgboost_phm,Statistical PHM baseline,.json/.ubj/.pkl/.joblib,True,trained_models/phm2010/xgboost_phm.json
+PHM 2010,cnn1d_phm,Temporal 1D-CNN baseline,.keras/.h5/.pt/.pth,True,trained_models/phm2010/cnn1d_phm.pt; trained_models/phm2010/cnn1d_phm_weights.pt
+PHM 2010,rcnn_phm,Proposed RCNN model,.keras/.h5/.pt/.pth,True,trained_models/phm2010/rcnn_phm.pt; trained_models/phm2010/rcnn_phm_weights.pt
+PHM 2010,transfer_ai4i_to_phm,Staged transfer model,.keras/.h5/.pt/.pth,True,trained_models/phm2010/transfer_ai4i_to_phm.pt; trained_models/phm2010/transfer_ai4i_to_phm_weights.pt
+AI4I 2020,numpy_logistic_weighted,Dependency-free release baseline,.npz,True,trained_models/ai4i/numpy_logistic_weighted.npz
+AI4I 2020,numpy_gaussian_nb,Dependency-free release baseline,.npz,True,trained_models/ai4i/numpy_gaussian_nb.npz
+AI4I 2020,numpy_knn_k5,Dependency-free release baseline,.npz,True,trained_models/ai4i/numpy_knn_k5.npz

@@ -37,7 +37,7 @@ def build_features_b2(d: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     """
     Leakage-safe track: drops TWF…RNF and adds 17 process-informed scalars + Type OHE.
 
-    Mirrors the Colab notebook implementation in ``colab/gen_notebook.py``.
+    Mirrors the release feature engineering used by the training scripts.
     """
     dd = d.copy()
     dd = dd.drop(columns=[c for c in ("UID", "UDI", "Product ID") if c in dd.columns], errors="ignore")
@@ -81,6 +81,9 @@ def build_features_b2(d: pd.DataFrame) -> tuple[pd.DataFrame, np.ndarray]:
     if a is not None and p is not None:
         aa = a.clip(lower=1.0)
         dtemp = p - a
+        if t_num is not None:
+            dd["Proc_x_torque"] = p * t_num
+            dd["Temp_x_torque"] = dtemp * t_num
         dd["Delta_temp_K"] = dtemp
         dd["Thermal_ratio"] = dtemp / aa
         dd["Temp_product_K2"] = a * p
