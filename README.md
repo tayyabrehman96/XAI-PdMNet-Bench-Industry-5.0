@@ -9,6 +9,56 @@ Unlike many **AI4I** reproductions, the default training path (**track B2**) dro
 
 ---
 
+## Public datasets & download links
+
+Use the **canonical** sources below for licensing and citations. This repository also hosts **convenience copies** so clones run without extra manual steps where files are tracked.
+
+### This GitHub repository ([XAI-PdMNet-Bench-Industry-5.0](https://github.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0))
+
+| Asset | View on GitHub | Raw download |
+|-------|----------------|--------------|
+| **AI4I 2020** (`data/ai4i/ai4i2020.csv`) | [blob on `main`](https://github.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/blob/main/data/ai4i/ai4i2020.csv) | [`raw.githubusercontent.com/.../ai4i2020.csv`](https://raw.githubusercontent.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/main/data/ai4i/ai4i2020.csv) |
+| PHM **window** table *(from `prepare_phm2010_release_dataset.py`)* | [blob on `main`](https://github.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/blob/main/data/phm2010/phm2010_windows_6x500.csv) | [raw CSV](https://raw.githubusercontent.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/main/data/phm2010/phm2010_windows_6x500.csv) |
+| PHM **tabular feature** table | [blob on `main`](https://github.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/blob/main/data/phm2010/phm2010_feature_table.csv) | [raw CSV](https://raw.githubusercontent.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/main/data/phm2010/phm2010_feature_table.csv) |
+
+> **Mirrors.** Treat bundled AI4I files as mirrors of **UCI** — always cite [DOI 10.24432/C5HS5C](https://doi.org/10.24432/C5HS5C). Training scripts also accept **`data/ai4i2020.csv`** at the repo root if you add that path (same CSV schema).
+
+---
+
+### AI4I 2020 — official source (University of California, Irvine)
+
+| | Link |
+|---|------|
+| **Landing page** | [UCI Machine Learning Repository — dataset 601](https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset) |
+| **Direct HTTPS CSV** | [`https://archive.ics.uci.edu/ml/machine-learning-databases/00601/ai4i2020.csv`](https://archive.ics.uci.edu/ml/machine-learning-databases/00601/ai4i2020.csv) |
+| **DOI** | [10.24432/C5HS5C](https://doi.org/10.24432/C5HS5C) |
+| **Licence** | **CC BY 4.0** |
+
+---
+
+### PHM 2010 — CNC milling prognostics (forces / vibrations / wear)
+
+Pipeline scripts expect source arrays under `data/phm2010/source/originfeature/` as `data_x{1,4,6}.npy` and `data_y{1,4,6}.npy`. Build or obtain those from the **public 2010 PHM Society CNC milling challenge** materials and align names with this layout.
+
+| Source | URL | Notes |
+|--------|-----|--------|
+| **PHM Society — 2010 Data Challenge** | [Competition overview](https://www.phmsociety.org/competition/phm/10) | Official challenge context for high-speed CNC milling cutter wear |
+| **PHM Society — NASA datasets index** | [data.phmsociety.org — NASA](https://data.phmsociety.org/nasa/) | Society mirror of NASA-style prognostics packages; locate the entry that matches **CNC milling / 2010 challenge** tooling you use |
+| **IEEE DataPort** | [2010 PHM Society Conference Data Challenge entry](https://ieee-dataport.org/documents/2010-phm-society-conference-data-challenge) | Catalogue / community redistribution (some files may require IEEE login) |
+
+Prefer **official PHM Society** or **IEEE-indexed** packages over unidentified file dumps. If you rely on community mirrors (e.g. aggregator repos), verify **their licence** before redistribution.
+
+<details>
+<summary>Optional third-party mirrors (verify licence yourself)</summary>
+
+- Curated collections such as [alovberg/PHM-Datasets](https://github.com/alovberg/PHM-Datasets) list many PHM-linked downloads; treat as signposts only, not substitutes for attribution.
+
+</details>
+
+The same references are summarized under **[data/README.md](data/README.md)**.
+
+---
+
 ## Design philosophy
 
 | Principle | What it means here |
@@ -81,6 +131,8 @@ Older automation may ship helper trees `.deps/` or `.deps_runtime/`. Export `XAI
 ---
 
 ## Data layout
+
+Local paths mirror what the trainers expect — see **[Public datasets & download links](#public-datasets--download-links)** for **official HTTPS / DOI sources** plus **GitHub raw** URLs.
 
 ```
 data/
