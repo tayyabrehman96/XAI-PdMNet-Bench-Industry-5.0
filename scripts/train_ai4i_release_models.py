@@ -64,7 +64,7 @@ def require_ml_deps():
     except ImportError as exc:
         raise SystemExit(
             "Missing ML dependencies. Install the full environment first:\n"
-            "  pip install -r colab/requirements.txt\n"
+            "  pip install -r requirements.txt\n"
             f"Original import error: {exc}"
         ) from exc
 
