@@ -59,6 +59,37 @@ The same references are summarized under **[data/README.md](data/README.md)**.
 
 ---
 
+## Trained models — filenames & downloads
+
+Exported models live under **`trained_models/`**. If files are tracked in Git, anyone can **`curl`/`wget`** them from **`raw.githubusercontent.com`** without cloning the repo.
+
+- **Browse folder:** [`trained_models/`](https://github.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/tree/main/trained_models)
+- **Per-file blob + raw links:** **[trained_models/README.md](trained_models/README.md)**
+- **Inventory CSV (presence + byte sizes):** [`ALL_TRAINED_MODELS_INVENTORY.csv`](https://github.com/tayyabrehman96/XAI-PdMNet-Bench-Industry-5.0/blob/main/trained_models/ALL_TRAINED_MODELS_INVENTORY.csv)
+
+| Friendly name | Path | Produced by |
+|---------------|------|-------------|
+| Logistic Regression (scaled, balanced) | `trained_models/ai4i/logistic_regression.joblib` | `scripts/train_ai4i_release_models.py` |
+| Random Forest | `trained_models/ai4i/random_forest_ctgan.joblib` | same |
+| Hist Gradient Boosting | `trained_models/ai4i/hist_gradient_boosting_ctgan.joblib` | same |
+| XGBoost | `trained_models/ai4i/xgboost_ctgan.json` | same *(needs `xgboost`)* |
+| NumPy logistic (weighted) | `trained_models/ai4i/numpy_logistic_weighted.npz` | `scripts/train_fast_release_models.py` |
+| Gaussian Naive Bayes | `trained_models/ai4i/numpy_gaussian_nb.npz` | same |
+| k-NN (**k = 5**) | `trained_models/ai4i/numpy_knn_k5.npz` | same |
+| AlexNet-1D (tabular-as-1D) | `alexnet1d_safe.pt` + `_weights.pt` under `trained_models/ai4i/` | `scripts/train_torch_ai4i_deep_models.py` |
+| Tab Transformer (small) | `tabtransformer.pt` + `_weights.pt` | same |
+| CNN+LSTM (threshold 0.31) | `cnn_lstm_thr031.pt` + `_weights.pt` | same |
+| XGBoost PHM | `trained_models/phm2010/xgboost_phm.json` | `scripts/train_phm_release_models.py` |
+| CNN-1D PHM | `cnn1d_phm.pt` + `_weights.pt` under `trained_models/phm2010/` | same |
+| RCNN (Conv+BiLSTM) PHM | `rcnn_phm.pt` + `_weights.pt` | same |
+| Transfer AI4I→PHM | `transfer_ai4i_to_phm.pt` + `_weights.pt` | same |
+
+Column-order JSON helpers: **`ai4i_feature_columns.json`**, **`fast_feature_columns.json`**, **`phm_feature_columns.json`** — direct download URLs in **[trained_models/README.md](trained_models/README.md)**.
+
+Rebuild locally instead of downloading: **`python scripts/run_all_training.py`**, then **`python scripts/organize_trained_models.py`**.
+
+---
+
 ## Design philosophy
 
 | Principle | What it means here |
